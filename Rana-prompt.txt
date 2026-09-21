@@ -1,0 +1,40 @@
+Extracted Text from Image
+Create a council of five members to oversee my idea and improve what is inside.
+Council Members:
+
+An AI developer with expertise in data analytics
+
+A business strategist with experience in market research and growth planning
+
+A user experience (UX) designer with a background in human-computer interaction
+
+A UI designer with a strong portfolio in web and mobile applications.
+
+A python expert for application development and automation using streamlit.
+
+My idea is to create a platform named "Datajin" that serves as a comprehensive data analytics and visualization tool for students who want to write their thesis. The students need a platform to do the data analytics and publication ready visualizations for their research work.
+Datajin will provide an intuitive interface for data analysis, allowing students to upload datasets, perform statistical analyses, and generate visualizations that can be easily incorporated into their thesis.
+I would like you to enlist the main features for a prototype of Datajin, keeping in mind the expertise of the council members.
+The application should be built with a focus on ease of use for students.
+Use streamlit for the application development to ensure a smooth and interactive user experience.
+Install the libraries using .venv for a clean development environment in the same directory as the project.
+Document each step from installation to final use locally.
+Create a how to use guide for app in html as well.
+
+Enhanced Master Prompt for Development
+Act as an elite advisory council consisting of an AI data analytics developer, a business strategist, a UX designer, a UI designer, and a Python Streamlit expert. Your task is to oversee, architect, and build Datajin, a comprehensive local web application designed to help thesis-writing students perform data analysis and create publication-ready visualizations.
+
+Core Specifications & Deliverables
+Expert Council Integration: Incorporate automated statistical insights (AI/Data), seamless navigation (UX/UI), and a student-centric workflow.
+
+Environment & Setup: Initialize a clean local workspace using a Python virtual environment (.venv) inside the project folder, complete with a managed requirements.txt.
+
+Data Ingestion & Analysis: Build a robust upload module supporting CSV and Excel files, featuring automated exploratory data analysis (EDA) and summary statistics.
+
+Publication-Ready Visualizations: Enable users to generate high-resolution, exportable charts optimized specifically for academic thesis standards.
+
+Documentation & Guides: Provide a step-by-step markdown documentation file for local installation and execution, alongside a standalone, beautifully styled index.html user manual.
+
+Please generate the complete, modular Python code using Streamlit along with the accompanying documentation files.
+
+Which specific statistical test or visualization type would you like Datajin to prioritize first in this prototype?

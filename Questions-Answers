@@ -1,0 +1,55 @@
+what does this project do?
+what tech stack does this project use
+Explain the project sttucture to me
+
+
+what does this project do?
+This is Spendly, a Flask-based expense tracker web app — it looks like a step-by-step learning project (a course/tutorial scaffold, judging by comments like "Students will write this file in Step 1" and route stubs marked "coming in Step 3/4/7/8/9").
+
+Current state:
+- Working: landing page, register page, login page (routes just render templates so far)
+- Stubbed/TODO: logout, profile, add/edit/delete expense routes — all placeholder text, no logic yet
+- Database layer (database/db.py) is empty — meant to be built out with get_db(), init_db(), seed_db() using SQLite
+- Uses Flask 3.1, Werkzeug, and pytest for testing
+
+So functionally it's meant to become a full expense-tracking app (users register/login, then add/edit/delete their expenses), but right now it's just scaffolding with the auth pages and DB layer unimplemented.
+
+ what tech stack does this project use
+ Backend: Python / Flask 3.1 (with Werkzeug), using SQLite for the database (per the database/db.py stub).
+
+Frontend: server-rendered Jinja2 templates (templates/*.html) with plain CSS (static/css/style.css) and vanilla JavaScript (static/js/main.js) — no frontend framework.
+
+Testing: pytest + pytest-flask.
+
+No ORM, no build tooling (webpack/vite etc.) — it's a minimal, classic Flask stack.
+
+Explain the project sttucture to me
+Here's the layout of Spendly:
+
+expense-tracker/
+├── app.py                  Flask entry point — all routes defined here
+├── requirements.txt        Python deps (flask, werkzeug, pytest, pytest-flask)
+├── .gitignore              excludes venv/, the sqlite db, caches, .env
+│
+├── database/
+│   ├── __init__.py         empty — makes `database` an importable package
+│   └── db.py               empty stub — meant to hold get_db()/init_db()/seed_db() (SQLite)
+│
+├── templates/               Jinja2 HTML templates rendered by Flask
+│   ├── base.html            shared layout: nav bar, footer, links to CSS/JS — other pages extend this via {% block %}
+│   ├── landing.html         home/marketing page (route: "/")
+│   ├── login.html           login page (route: "/login")
+│   └── register.html        signup page (route: "/register")
+│
+└── static/                  assets served directly, referenced via url_for('static', ...)
+    ├── css/style.css        site styling
+    └── js/main.js           client-side JS
+
+How it fits together:
+- app.py is the single Flask app — no blueprints, no app factory, just one file with @app.route handlers.
+- Each route renders a template from templates/, which extends base.html for shared nav/footer.
+- static/ holds CSS/JS, wired into base.html via url_for.
+- database/db.py is currently empty — the intended data layer for expenses/users, not yet built.
+- Several routes (logout, profile, expenses/add|edit|delete) exist only as placeholder strings — no real logic, no DB writes yet.
+
+So it's a very flat, no-framework-magic structure: one app file, templates, static assets, and a not-yet-implemented database module — consistent with it being an incremental teaching project.

@@ -1,0 +1,3 @@
+1- Create a Branch of the github main repo to Dev
+2- Create a folder named RegTrackDev in project folder
+3- Clone and bring the Dev repo to local system in project/RegTrackDev folder
